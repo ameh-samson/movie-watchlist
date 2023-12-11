@@ -26,24 +26,28 @@
     <title>Movie Watchlist</title>
   </head>
   <body>
-    <header>
-      <h1 class="header-title">Find your film</h1>
-      <p class="header-sub"></p>
+    <header class="header">
+      <div class="container">
+        <h1 class="header-title">Find your film</h1>
+        <p class="header-sub">My Watchlist</p>
+      </div>
     </header>
 
     <main>
       <form class="search-section">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Blade Runner" />
-        <button type="submit">Search</button>
+        <div class="container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input class="search-input" type="text" placeholder="Blade Runner" />
+          <button class="search-btn" type="submit">Search</button>
+        </div>
       </form>
 
       <section class="search-result-initial-state">
-        <!-- initial state -->
-        <i class="fa-solid fa-film"></i>
-        <p>Start exploring</p>
-
-        <!-- populated state -->
+        <div class="container">
+          <!-- initial state -->
+          <i class="fa-solid fa-film film-icon"></i>
+          <p class="initial-state-title">Start exploring</p>
+        </div>
       </section>
 
       <section class="search-result-populated-state" style="display: none">
