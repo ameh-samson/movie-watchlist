@@ -29,7 +29,6 @@ p {
 .container {
   width: 550px;
   max-width: 90%;
-  padding-inline: 2.75em;
   margin: 0 auto;
 }
 
@@ -126,4 +125,80 @@ p {
   font-size: 1.125rem;
   font-weight: 700;
   margin-top: 0.486em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 42px;
+}
+
+.movie-details {
+  display: flex;
+  gap: 21px;
+}
+
+.movie-img {
+  width: 99px;
+  height: 147.41px;
+}
+
+.movie-details {
+  margin-top: 25px;
+  border-bottom: 2px solid #2c2c2c;
+}
+
+.movie-details:last-child {
+  border-bottom: none;
+}
+
+.movie-details * div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.movie-details-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.star {
+  font-size: 0.938rem;
+  color: #fec654;
+  margin: 0 0.267em;
+}
+
+.rating {
+  font-size: 0.75rem;
+  padding-top: 0.417em;
+}
+
+.movie-genre {
+  font-weight: 0.75rem;
+  justify-content: space-between;
+}
+
+.add-btn {
+  margin: 0 auto;
+  font-weight: 800;
+  color: #000;
+  background: #ffffff;
+  padding: 2px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  color: #ffffff;
+  background: #008000;
+}
+
+.movie-description {
+  text-align: justify;
+}
+
+.movie-details-inner-div {
+  margin-bottom: 34px;
 }
