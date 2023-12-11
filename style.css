@@ -121,7 +121,8 @@ a {
 
 /* search-result-initial-state-section */
 
-.search-result-initial-state {
+.search-result-initial-state,
+.no-data-state-content {
   text-align: center;
   margin-top: 13.188em;
   color: #2e2e2f;
@@ -172,6 +173,7 @@ a {
 .movie-details-title {
   font-size: 1.125rem;
   font-weight: 500;
+  margin-right: 30px;
 }
 
 .star {
@@ -180,7 +182,7 @@ a {
   margin: 0 0.267em;
 }
 
-.rating {
+.type {
   font-size: 0.75rem;
   padding-top: 0.417em;
 }
