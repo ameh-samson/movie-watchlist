@@ -17,6 +17,7 @@ body {
   color: rgba(165, 165, 165, 1);
   height: 100vh;
   line-height: 1.4;
+  width: 550px;
 }
 
 h1,
@@ -32,7 +33,6 @@ a {
 /* general style */
 
 .container {
-  width: 550px;
   max-width: 90%;
   margin: 0 auto;
 }
@@ -139,9 +139,7 @@ a {
 
 /* search-result-populated-state */
 
-.grid {
-  display: grid;
-  grid-template-columns: 1fr;
+.search-result-populated-state {
   margin-top: 2.625em;
 }
 
@@ -209,6 +207,7 @@ a {
 
 .movie-description {
   text-align: justify;
+  align-self: flex-start;
 }
 
 .movie-details-inner-div {
