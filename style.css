@@ -17,7 +17,6 @@ body {
   color: rgba(165, 165, 165, 1);
   height: 100vh;
   line-height: 1.4;
-  width: 550px;
 }
 
 h1,
@@ -33,6 +32,7 @@ a {
 /* general style */
 
 .container {
+  width: 550px;
   max-width: 90%;
   margin: 0 auto;
 }

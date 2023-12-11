@@ -47,31 +47,52 @@ async function fetchMovieDetails(searchNames) {
     const movie = await response.json();
 
     if (movie.Title) {
-      const html = `
-        <div class="movie-details">
-          <img class="movie-img" src="${movie.Poster}" alt="" />
-          <div class="movie-details-inner-div">
-            <div>
-              <p class="movie-details-title">${movie.Title}</p>
-              <p class="type">Type: ${movie.Type}</p>
-            </div>
-
-            <div class="movie-genre">
-              <p>${movie.Runtime}</p>
-              <p>${movie.Genre}</p>
-              <p>
-                <i class="fa-solid fa-plus add-btn"></i>
-                Watchlist
-              </p>
-            </div>
-            <p class="movie-description">
-              ${movie.Plot}
-            </p>
-          </div>
-        </div>
-      `;
-
-      searchResultPopulatedDiv.innerHTML += html;
+      renderMovieDetails(movie);
     }
   }
+}
+
+// Function to render movie details
+function renderMovieDetails(movie) {
+  const html = `
+      <div class="movie-details">
+        <img class="movie-img" src="${movie.Poster}" alt="" />
+        <div class="movie-details-inner-div">
+          <div>
+            <p class="movie-details-title">${movie.Title}</p>
+            <p class="type">Type: ${movie.Type}</p>
+          </div>
+  
+          <div class="movie-genre">
+            <p>${movie.Runtime}</p>
+            <p>${movie.Genre}</p>
+            <p>
+              <i class="fa-solid fa-plus add-btn"></i>
+              Watchlist
+            </p>
+          </div>
+          <p class="movie-description">
+            ${movie.Plot}
+          </p>
+        </div>
+      </div>
+    `;
+
+  // Append HTML content to the search result container
+  searchResultPopulatedDiv.innerHTML += html;
+}
+
+function addToWatchlist(movieTitle) {
+  // Assuming you have a div with the ID "watchlist" to append movies
+  const watchlistDiv = document.getElementById("watchlist");
+
+  const watchlistHtml = `
+      <div class="watchlist-item">
+        <p>${movieTitle}</p>
+        <!-- Add any additional details or styling here -->
+      </div>
+    `;
+
+  // Append HTML content to the watchlist container
+  watchlistDiv.innerHTML += watchlistHtml;
 }
